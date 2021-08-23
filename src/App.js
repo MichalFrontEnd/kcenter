@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import {arr} from './components/data'
+import Button from './components/Button'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="head">Latana Knowledge Center</h1>
+      <h6>Everything you need to know about the best brand tracking solution in the world.</h6>
+      <div className="carousel-container">
+        {arr && (
+          arr.map((item, i) => {
+            return (
+              <div key={i} className="carousel-card">
+                <img src={item.src} alt="" />
+                <h2>{item.header}</h2>
+                <p>{item.a}</p>
+                <p>{item.b}</p>
+                <p>{item.c}</p>
+                <Button />
+              </div>
+            )
+          })
+        )}
+
+      </div>
+
+
     </div>
   );
 }
