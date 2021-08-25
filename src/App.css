@@ -1,38 +1,74 @@
+body {
+    position: relative;
+}
+
 .App {
-  text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+    position: absolute;
+    left: 8.26%;
+    top: 10.56%;
+    color: #000;
+    font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.head h1,
+.learn-more:hover,
+.carousel-card h2 {
+    font-weight: 800;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.head h1 {
+    font-size: 48px;
+    margin-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.head p {
+    margin-top: 1%;
+    font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-container {
+    margin-top: 60px;
+    height: 519px;
+    display: inline-flex;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel-card {
+    display: flex;
+    flex-direction: column;
+    width: 384px;
+}
+
+.carousel-card img {
+    height: 220px;
+    align-items: center;
+}
+
+.carousel-card h2 {
+    font-size: 32px;
+}
+
+/*.opaque {
+    grid-column: 4 / span 2;
+    background-color: aquamarine;
+    z-index: 3;
+    height: 519px;
+}*/
+
+.learn-more {
+    border: 1px solid #340d70;
+    border-radius: 4px;
+    color: #340d70;
+    background-color: white;
+    width: 152px;
+    height: 52px;
+    text-align: center;
+    line-height: 23px;
+}
+
+.learn-more:hover {
+    border: 2px solid #340d70;
 }
