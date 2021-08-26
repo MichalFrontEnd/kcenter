@@ -39,6 +39,7 @@ function App() {
         <h1>Latana Knowledge Center</h1>
         <p>Everything you need to know about the best brand tracking solution in the world.</p>
       </header>
+      <div className="opaque"></div>
       <div className="carousel-container">
         {cards && (
           cards.map((item) => {
@@ -61,10 +62,11 @@ function App() {
             )
           })
         )}
-      <div className="opaque"></div>
       </div>
-      <button className="prev" onClick={prevCard}>Prev</button>
-      <button className="next" onClick={nextCard}>Next</button>
+      <div className="arrow-container">
+        <button className="prev" onClick={prevCard}>Prev</button>
+        <button className="next" onClick={nextCard}>Next</button>
+      </div>
     </div>
   );
 }

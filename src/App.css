@@ -5,6 +5,104 @@ body {
 .App {
     font-family: "Mulish", sans-serif;
     font-size: 18px;
+    /*margin: 0 11.25% 11.25% 6.34%;*/
+    color: #000;
+    font-weight: 400;
+    position: absolute;
+    top: 60px;
+}
+
+.head h1,
+.learn-more:hover,
+.carousel-card h2 {
+    font-weight: 800;
+}
+
+.head,
+.carousel-card {
+    margin-left: 11.25%;
+    margin-right: 11.25%;
+}
+
+.head h1 {
+    font-size: 34px;
+    margin-bottom: 0;
+    line-height: 43px;
+}
+
+.head p {
+    margin-top: 1%;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.carousel-container {
+    position: absolute;
+    top: 326px;
+    height: 449px;
+    display: inline-flex;
+    overflow-x: hidden;
+    width: 100vw;
+    z-index: 1;
+}
+
+.carousel-card {
+    display: flex;
+    flex-direction: column;
+    width: 248px;
+    height: 323px;
+    margin-right: 6.34%;
+}
+
+.carousel-card img {
+    height: 142px;
+    align-items: center;
+}
+
+.carousel-card h2 {
+    font-size: 32px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+}
+
+.opaque {
+    position: absolute;
+    top: 326px;
+    right: -6.34%;
+    height: 100vh;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+}
+
+.learn-more {
+    border: 1px solid #340d70;
+    border-radius: 4px;
+    color: #340d70;
+    background-color: white;
+    width: 136px;
+    height: 42px;
+    text-align: center;
+    line-height: 23px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 3%;
+}
+
+.learn-more:hover {
+    border: 2px solid #340d70;
+}
+
+.arrow-container {
+    position: absolute;
+    top: 815px;
+}
+
+/*desktop preview
+.App {
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
     position: absolute;
     left: 8.26%;
     top: 10.56%;
@@ -51,13 +149,6 @@ body {
     font-size: 32px;
 }
 
-/*.opaque {
-    grid-column: 4 / span 2;
-    background-color: aquamarine;
-    z-index: 3;
-    height: 519px;
-}*/
-
 .learn-more {
     border: 1px solid #340d70;
     border-radius: 4px;
@@ -71,4 +162,4 @@ body {
 
 .learn-more:hover {
     border: 2px solid #340d70;
-}
+}*/
