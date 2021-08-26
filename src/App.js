@@ -42,22 +42,23 @@ function App() {
       <div className="opaque"></div>
       <div className="carousel-container">
         {cards && (
-          cards.map((item) => {
+          cards.map((item, i) => {
             return (
               <div 
-              key={item.id} 
-              className="carousel-card" 
-              id={item.id} 
-              //onClick={printCurrent}
-              >
-                <img src={item.src} alt="" />
-                <div className="card-text">
-                  <h2>{item.header}</h2>
-                  <p>{item.a}</p>
-                  <p>{item.b}</p>
-                  <p>{item.c}</p>
-                </div>
-                <Button to={item.href}/>
+              key={i} 
+              className= {i === current? "carousel-card active" : "carousel-card"}>
+                {i === current && (
+                  <section>
+                    <img src={item.src} alt="" />
+                    <div className="card-text">
+                      <h2>{item.header}</h2>
+                      <p>{item.a}</p>
+                      <p>{item.b}</p>
+                      <p>{item.c}</p>
+                    </div>
+                    <Button to={item.href}/>
+                  </section>
+                )}
               </div>
             )
           })
