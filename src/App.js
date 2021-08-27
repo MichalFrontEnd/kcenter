@@ -1,21 +1,42 @@
 import './App.css';
-import {useState} from 'react';
+import {useState, useRef, useEffect} from 'react';
 import {cards} from './components/data'
 import Button from './components/Button'
 
 function App() {
   const [current, setCurrent] = useState(0);
   const length = cards.length;
-  const [isFirst, setIsFirst] = useState(null);
+  const [x, setX] = useState(0);
+  const cardRef = useRef()
+
+  console.log('cardRef: ', cardRef);
+
+
+  //get dynamic width
+
+  const width = 240;
+
 
   const prevCard = () => {
-        setCurrent(current === 0 ? 0 : current - 1 )
+    if (current !== 0) {
+      setCurrent(current - 1)
+      setX(x+width)
+    } else {
+      setCurrent(0)
+    }
+        //setCurrent(current === 0 ? 0 : current - 1)
   }
 
   const nextCard = () => {
-    setCurrent(current === length -1? length-1 : current + 1  )
+    if (current !== length -1) {
+      setCurrent(current + 1)
+      setX(x-width)
+    } else {
+      setCurrent(length -1)
+    }
+    //setCurrent(current === length -1? length-1 : current + 1 )
   }
-
+  console.log('x: ', x);
   //const printCurrent = (e) => {
   //  console.log('e.currentTarget: ', e.currentTarget.id);
   //  let clicked = e.currentTarget.id;
@@ -46,7 +67,10 @@ function App() {
             return (
               <div 
               key={i} 
-              className= {i === current? "carousel-card active" : "carousel-card"}>
+              className= {i === current? "carousel-card active" : "carousel-card"}
+              style={{transform: `translateX(${x}px)`}}
+              ref={cardRef}
+              >
                 {i === current && (
                   <section>
                     <img src={item.src} alt="" />

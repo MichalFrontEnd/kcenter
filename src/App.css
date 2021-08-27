@@ -52,6 +52,7 @@ body {
     width: 248px;
     height: 323px;
     margin-right: 6.34%;
+    transition-duration: 0.5s;
 }
 
 .carousel-card img {
@@ -62,8 +63,6 @@ body {
 .carousel-card h2 {
     font-size: 32px;
     white-space: nowrap;
-    /*overflow: hidden;*/
-    /*text-overflow: ellipsis;*/
 }
 
 .opaque {
