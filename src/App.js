@@ -2,19 +2,21 @@ import './App.css';
 import {useState, useRef, useEffect} from 'react';
 import {cards} from './components/data'
 import Button from './components/Button'
+import { BsArrowRight, BsArrowLeft} from 'react-icons/bs'
+
 
 function App() {
   const [current, setCurrent] = useState(0);
   const length = cards.length;
   const [x, setX] = useState(0);
-  const cardRef = useRef()
-
-  console.log('cardRef: ', cardRef);
-
 
   //get dynamic width
 
-  const width = 240;
+  const width = 400;
+  const style = {
+    width:`${width}px`, 
+    transform: `translateX(${x}px)`
+  }
 
 
   const prevCard = () => {
@@ -37,11 +39,6 @@ function App() {
     //setCurrent(current === length -1? length-1 : current + 1 )
   }
   console.log('x: ', x);
-  //const printCurrent = (e) => {
-  //  console.log('e.currentTarget: ', e.currentTarget.id);
-  //  let clicked = e.currentTarget.id;
-  //  console.log('clicked === current: ', clicked === current);
-  //}
 
     //if should be continuous
   //const prevCard = () => {
@@ -55,44 +52,40 @@ function App() {
   //console.log('current: ', current);
 
   return (
-    <div className="App">
+    <>
       <header className="head">
         <h1>Latana Knowledge Center</h1>
         <p>Everything you need to know about the best brand tracking solution in the world.</p>
       </header>
       <div className="opaque"></div>
       <div className="carousel-container">
+        <div className="opaque"></div>
         {cards && (
           cards.map((item, i) => {
             return (
               <div 
               key={i} 
-              className= {i === current? "carousel-card active" : "carousel-card"}
-              style={{transform: `translateX(${x}px)`}}
-              ref={cardRef}
+              className= {i === current? "carousel-card active" : "carousel-card"} 
+              style={style}
               >
-                {i === current && (
-                  <section>
-                    <img src={item.src} alt="" />
-                    <div className="card-text">
-                      <h2>{item.header}</h2>
-                      <p>{item.a}</p>
-                      <p>{item.b}</p>
-                      <p>{item.c}</p>
-                    </div>
-                    <Button to={item.href}/>
-                  </section>
-                )}
+                <img src={item.src} alt="" />
+                <div className="card-text">
+                  <h2>{item.header}</h2>
+                  <p>{item.a}</p>
+                  <p>{item.b}</p>
+                  <p>{item.c}</p>
+                </div>
+                <Button to={item.href}/>
               </div>
             )
           })
         )}
       </div>
       <div className="arrow-container">
-        <button className="prev" onClick={prevCard}>Prev</button>
-        <button className="next" onClick={nextCard}>Next</button>
+        <BsArrowLeft className="prev" onClick={prevCard} />
+        <BsArrowRight className="next" onClick={nextCard} />
       </div>
-    </div>
+    </>
   );
 }
 

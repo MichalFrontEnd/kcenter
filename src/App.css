@@ -1,8 +1,5 @@
-body {
+#root {
     position: relative;
-}
-
-.App {
     font-family: "Mulish", sans-serif;
     font-size: 18px;
     /*margin: 0 11.25% 11.25% 6.34%;*/
@@ -12,6 +9,15 @@ body {
     top: 60px;
 }
 
+/*.App {
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    position: absolute;
+    top: 60px;
+}*/
+
 .head h1,
 .learn-more:hover,
 .carousel-card h2 {
@@ -19,7 +25,8 @@ body {
 }
 
 .head,
-.carousel-card {
+.carousel-card,
+.arrow-container {
     margin-left: 11.25%;
     margin-right: 11.25%;
 }
@@ -96,69 +103,168 @@ body {
 .arrow-container {
     position: absolute;
     top: 815px;
-}
-
-/*desktop preview
-.App {
-    font-family: "Mulish", sans-serif;
-    font-size: 18px;
-    position: absolute;
-    left: 8.26%;
-    top: 10.56%;
-    color: #000;
-    font-weight: 400;
-}
-
-.head h1,
-.learn-more:hover,
-.carousel-card h2 {
-    font-weight: 800;
-}
-
-.head h1 {
-    font-size: 48px;
-    margin-bottom: 0;
-}
-
-.head p {
-    margin-top: 1%;
-    font-size: 20px;
-}
-
-.carousel-container {
-    margin-top: 60px;
-    height: 519px;
-    display: inline-flex;
-    overflow-x: hidden;
-    width: 100vw;
-}
-
-.carousel-card {
     display: flex;
-    flex-direction: column;
-    width: 384px;
+    justify-content: space-between;
+    width: 30%;
+    height: max-content;
 }
 
-.carousel-card img {
-    height: 220px;
-    align-items: center;
+.prev,
+.next {
+    color: #31135e;
+    border: #31135e 1px solid;
+    border-radius: 50%;
+    width: auto;
+    height: 48px;
 }
 
-.carousel-card h2 {
-    font-size: 32px;
+.prev:hover,
+.next:hover {
+    transform: rotate(-180deg);
+    transition: 0.15s ease-in-out;
+    background-color: #31135e;
+    color: #fff;
 }
 
-.learn-more {
-    border: 1px solid #340d70;
-    border-radius: 4px;
-    color: #340d70;
-    background-color: white;
-    width: 152px;
-    height: 52px;
-    text-align: center;
-    line-height: 23px;
-}
+@media screen and (min-width: 760px) {
+    #root {
+        position: relative;
+        overflow-x: hidden;
+        font-family: "Mulish", sans-serif;
+        font-size: 18px;
+        position: absolute;
+        color: #000;
+        font-weight: 400;
+        height: 100%;
+        width: 100%;
+    }
 
-.learn-more:hover {
-    border: 2px solid #340d70;
-}*/
+    /*.App {
+        font-family: "Mulish", sans-serif;
+        font-size: 18px;
+        position: absolute;
+        color: #000;
+        font-weight: 400;
+        background-color: aqua;
+        top: 100px;
+        height: 100%;
+        width: 100%;
+    }*/
+
+    .head {
+        top: 100px;
+    }
+
+    .head,
+    .carousel-container,
+    .arrow-container {
+        margin-left: 120px;
+    }
+
+    .head h1,
+    .learn-more:hover,
+    .carousel-card h2 {
+        font-weight: 800;
+    }
+
+    .head h1 {
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+
+    .head p {
+        margin-top: 1%;
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    /*.opaque {
+        opacity: 0.2;
+    }*/
+
+    .opaque {
+        position: absolute;
+        top: 253px;
+        height: 519px;
+        right: 0;
+        width: 384px;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 10;
+    }
+
+    .carousel-container {
+        /*margin-top: 60px;*/
+        top: 253px;
+        height: 519px;
+        display: inline-flex;
+        overflow-x: hidden;
+        width: 2000px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    .carousel-card {
+        display: flex;
+        flex-direction: column;
+        width: 384px;
+        height: 479px;
+        border: 1px black solid;
+        align-items: flex-start;
+        margin: 0;
+        margin-right: 3%;
+
+        /*margin-right: 6.25%;*/
+    }
+
+    .carousel-card img {
+        height: 220px;
+        align-items: center;
+    }
+
+    .carousel-card h2 {
+        font-size: 32px;
+        overflow-wrap: normal;
+    }
+
+    .learn-more {
+        border: 1px solid #340d70;
+        border-radius: 4px;
+        color: #340d70;
+        background-color: white;
+        width: 152px;
+        height: 52px;
+        text-align: center;
+        line-height: 23px;
+    }
+
+    .learn-more:hover {
+        border: 2px solid #340d70;
+        transition: ease-in-out 0.15s;
+    }
+
+    .arrow-container {
+        position: absolute;
+        top: 815px;
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        height: max-content;
+    }
+
+    .prev,
+    .next {
+        color: #31135e;
+        border: #31135e 1px solid;
+        border-radius: 50%;
+        width: auto;
+        height: 48px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        transform: rotate(-180deg);
+        transition: 0.15s ease-in-out;
+        background-color: #31135e;
+        color: #fff;
+    }
+}
