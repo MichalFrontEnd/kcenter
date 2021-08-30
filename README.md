@@ -17,7 +17,7 @@ There is optional logic for continuous navigation, upon which the disabled style
 transition should be added.
 
  
-===
+-----
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
