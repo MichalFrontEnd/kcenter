@@ -16,7 +16,12 @@ The arrow navigation buttons change on hover, and are disabled when the user can
 There is optional logic for continuous navigation, upon which the disabled style should be removed, and a more elegant 
 transition should be added.
 
-#### Preview
+#### <u>Add later</u>
+
+* continuous scrolling.
+* Swipe for mobile version.
+
+#### <u>Preview</u>
 ![alt text](https://github.com/MichalFrontEnd/kcenter/blob/main/public/GIFdemo.gif "Knowledge Center Preview Gif")
 
 
