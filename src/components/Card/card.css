@@ -1,0 +1,47 @@
+.carousel-card h2 {
+    font-weight: 800;
+    font-size: 32px;
+    margin-bottom: 5px;
+    width: 90%;
+    white-space: wrap;
+}
+
+.carousel-card p {
+    margin: 5% 0;
+    overflow-wrap: normal;
+}
+
+.carousel-card img {
+    margin-right: 30;
+}
+
+.card-btn {
+    border: 1px solid #340d70;
+    border-radius: 4px;
+    color: #340d70;
+    background-color: white;
+    width: 30%;
+    padding: 2% 0;
+    text-align: center;
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-btn:hover {
+    border: 2px solid #340d70;
+    font-weight: 800;
+    transition: ease-in-out 0.15s;
+}
+
+/*@media screen and (max-width: 720px) {
+    .carousel-card h3 {
+        font-size: 24px;
+    }
+    .carousel-card div {
+        font-size: 14px;
+    }
+    .carousel-card img {
+        height: 40%;
+    }
+}*/
