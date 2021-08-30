@@ -1,11 +1,11 @@
 # Knowledge Center
 ### Carousel coding challenge for Latana
 
-####-The task-
+#### -The task-
 creating a slider for the marketing team out of a Figma design.
 The marketing team provided a mobile and a desktop version.
 
-####-Features-
+#### -Features-
 A function that runs upon mount/change checks the screen size of the device used, and determines how many cards
 should be shown (1-3). 
 Starting with the desktop version I implemented logic that uses the id of the current "first" element 
