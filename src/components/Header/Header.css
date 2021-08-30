@@ -1,34 +1,29 @@
+.header-container {
+    margin: 1% 0 0 1%;
+}
+
 .header {
     font-weight: 800;
     font-size: 48px;
-    margin-left: 1%;
-    margin-top: 3%;
-    margin-bottom: 8px;
+    margin-bottom: 1%;
 }
-
-/*.head h1 {
-    font-size: 34px;
-    margin-bottom: 0;
-    line-height: 43px;
-}*/
 
 .description {
     font-size: 20px;
-    margin-left: 1%;
 }
 
-/*.head p {
-    margin-top: 1%;
-    font-size: 18px;
-    line-height: 23px;
-}*/
-
-/*@media screen and (max-width: 720px) {
-    .headline {
+@media screen and (max-width: 720px) {
+    .header {
         font-size: 32px;
+        width: 30%;
     }
+
     .description {
         font-size: 16px;
-        width: 90%;
+        width: 80%;
     }
-}*/
+
+    .header-container {
+        margin-bottom: 0;
+    }
+}

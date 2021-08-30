@@ -9,15 +9,13 @@ body {
 }
 
 .page-wrapper {
-    margin-left: 5%;
+    margin: 1% 0 0 5%;
     overflow-x: hidden;
 }
 
 .main {
-    max-width: 1400;
     margin-left: 0;
     margin-right: auto;
-    margin-top: 10;
     padding-left: 5%;
 }
 
