@@ -1,11 +1,11 @@
 # Knowledge Center
 ### Carousel coding challenge for Latana
 
-#### The task
+#### <u>The task</u>
 creating a slider for the marketing team out of a Figma design.
 The marketing team provided a mobile and a desktop version.
 
-#### Features
+#### <u>Features</u>
 A function that runs upon mount/change checks the screen size of the device used, and determines how many cards
 should be shown (1-3). 
 Starting with the desktop version I implemented logic that uses the id of the current "first" element 
@@ -16,7 +16,10 @@ The arrow navigation buttons change on hover, and are disabled when the user can
 There is optional logic for continuous navigation, upon which the disabled style should be removed, and a more elegant 
 transition should be added.
 
- 
+#### Preview
+![alt text](https://github.com/MichalFrontEnd/kcenter/blob/main/public/GIFdemo.gif "Knowledge Center Preview Gif")
+
+
 -----
 
 
